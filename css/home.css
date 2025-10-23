@@ -1,0 +1,90 @@
+.card-container {
+    background-color: white;
+    border-radius: 10px;
+    border-color: black;
+    border-style: outset;
+    border-width: 2px;
+    color: black;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+    width: 20%;
+}
+
+.card-container:hover {
+    background-color: #e8e8e8;
+}
+
+.card-container > img {
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    height: auto;
+    margin-left: 200px;
+    padding: 1px 16px;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+ 
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/*media query for card containers*/
+/*make sure to do media queries for each screen. remember typography and stuff*/
+@media screen and (max-width: 915px) {
+    .card-container {
+        width: 50%;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .flex-container {
+        margin-left: 0;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
