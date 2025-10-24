@@ -1,29 +1,49 @@
 .card-container {
+    align-items: stretch;
     background-color: white;
     border-radius: 10px;
     border-color: black;
     border-style: outset;
     border-width: 2px;
-    color: black;
+    color: #003642;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
     transition: background-color 0.2s ease-in-out;
-    width: 90%;
+    width: 100%;
 }
 
 .card-container:hover {
     background-color: #e8e8e8;
 }
 
-.card-container > img {
+.card-container img {
     display: flex;
     margin: auto;
     width: 100%;
 }
 
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: flex-start;
+    line-height: 1.5rem;
+}
+
+.card-text h2, h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
 .flex-container {
+    align-items: stretch;
     display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     height: auto;
     justify-content: space-between; 
@@ -49,7 +69,7 @@
 
 .sidebar a, h2, h3, .filter-bar {
     display: block;
-    color: black;
+    color: #003642;
     padding: 16px;
     /*text-decoration: none;*/
 }
