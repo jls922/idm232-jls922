@@ -1,5 +1,26 @@
+.content {
+    margin: 125px;
+}
+
 .content img {
     display: block;
     margin: auto;
     width: 50%;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    text-align: left;
+}
+
+.two-column img {
+    align-items: right;
+    margin-right: 0px;
+}
+
+.two-column .column {
+    margin: 20px;
+    width: 100%;
 }

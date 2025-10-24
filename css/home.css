@@ -9,7 +9,7 @@
     padding: 20px;
     text-align: center;
     transition: background-color 0.2s ease-in-out;
-    width: 20%;
+    width: 90%;
 }
 
 .card-container:hover {
@@ -23,19 +23,21 @@
 }
 
 .flex-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     height: auto;
+    justify-content: space-between; 
     margin-left: 200px;
     padding: 1px 16px;
 }
 
 .sidebar {
-    margin: 0;
-    padding: 0;
     width: 200px;
     background-color: #f1f1f1;
-    position: fixed;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
     overflow: auto;
 }
 
@@ -58,17 +60,19 @@
 
 /*media query for card containers*/
 /*make sure to do media queries for each screen. remember typography and stuff*/
-@media screen and (max-width: 915px) {
-    .card-container {
-        width: 50%;
-    }
+@media screen and (max-width: 1120px) {
     .flex-container {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 975px) {
+    .flex-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 730px) {
     .flex-container {
         margin-left: 0;
     }
@@ -79,6 +83,15 @@
     }
     .sidebar a {
         float: left;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .card-container {
+        width: 100%;
+    }
+    .flex-container {
+        grid-template-columns: 1fr;
     }
 }
 

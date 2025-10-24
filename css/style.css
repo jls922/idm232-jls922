@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Merriweather;
+    src: url(../fonts/Merriweather/Merriweather-VariableFont_opsz\,wdth\,wght.ttf);
+  }
+
+@font-face {
+    font-family: Source Sans; /*Source Sans 3*/
+    src: url(../fonts/Source_Sans_3/SourceSans3-VariableFont_wght.ttf);
+  }
+
 * {
     box-sizing: border-box;
   }
@@ -6,8 +16,29 @@
 	--rhythm: 1.5rem;
 }
 
+body {
+    font-family: Source Sans;
+}
+
+h1, h2, h3 {
+    font-family: Merriweather;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: yellow;
+}
+
+p, li {
+    font-size: 18px;
+}
+
 .content {
-    margin: 20px;
+    margin: 40px;
 }
 
 .center-text {
@@ -19,24 +50,8 @@ h1.page-title {
 }
 
 .title-container {
-    background-color: #4285F4;
+    background-color: #18746d;
     color: white;
-    padding: 1px 16px;
-    /*padding: 20px;*/
+    padding: 1px 16px; /*padding: 20px;*/
     text-align: left;
-}
-
-.two-column {
-    display: flex;
-    text-align: left;
-    
-}
-
-.two-column img {
-    align-items: right;
-    margin-right: 0px;
-}
-
-.two-column .column {
-    margin: 20px;
 }
