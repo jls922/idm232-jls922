@@ -45,7 +45,7 @@ p, li {
     text-align: center;
 }
 
-h1.page-title {
+.page-title {
     text-align: center;
 }
 
@@ -54,4 +54,16 @@ h1.page-title {
     color: white;
     padding: 1px 16px; /*padding: 20px;*/
     text-align: left;
+}
+
+@media screen and (max-width: 725px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+    h2, h3 {
+        font-size: 1.25rem;
+    }
+    p, li {
+        font-size: 16px;
+    }
 }
