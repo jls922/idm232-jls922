@@ -42,13 +42,15 @@
 
 .filter-button {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 10px;
     margin: 0px;
     flex-wrap: wrap; 
 }
 
 .filter-button form button {
+    flex-wrap: wrap;
+    flex-direction: row;
     padding: 10px 20px;
     background-color: #003642;
     border: 5px solid #003642;
@@ -72,7 +74,7 @@
     grid-template-columns: repeat(4, 1fr);
     height: auto;
     justify-content: space-between; 
-    margin-left: 200px;
+    /*margin-left: 200px;*/
     padding: 1px 16px;
 }
 
@@ -81,10 +83,10 @@
 }
 
 
-
 .search-form {
     display: flex;
     justify-content: center;
+    text-align: center;
     margin: 20px auto;
 }
 
@@ -98,7 +100,7 @@
     border-right: none;
 }
 
-.sidebar {
+/*.sidebar {
     background-color: #f1f1f1;
     border-right: 2px outset black;
     border-radius: 2px;
@@ -108,13 +110,14 @@
     position: fixed;
     overflow: auto;
     width: 200px;
-}
+}*/
 
-.sidebar a, h2, h3, .filter-button {
+.sidebar a,
+.sidebar h2,
+.sidebar h3 {
     display: block;
     color: #003642;
     padding: 16px;
-    /*text-decoration: none;*/
 }
 
 /*media query for card containers*/
@@ -135,14 +138,14 @@
     .flex-container {
         margin-left: 0;
     }
-    .sidebar {
+    /*.sidebar {
         width: 100%;
         height: auto;
         position: relative;
     }
     .sidebar a {
         float: left;
-    }
+    }*/
 }
 
 @media screen and (max-width: 575px) {
@@ -154,9 +157,9 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+/*@media screen and (max-width: 400px) {
     .sidebar a {
         text-align: center;
         float: none;
     }
-}
+}*/

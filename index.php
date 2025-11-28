@@ -6,17 +6,7 @@
     $recipes = [];
     $search = $_GET['search'] ?? '';
     $filter = $_GET['filter'] ?? '';
-    /*
-    $filterBeef = isset($_GET['beef']);
-    $filterChicken = isset($_GET['chicken']);
-    $filterFish = isset($_GET['fish']); 
-    $filterPork = isset($_GET['pork']);
-    $filterTurkey = isset($_GET['turkey']);
-    $filterVeg = isset($_GET['vegetarian']); 
-
-    $searchQuery = $_GET['search'] ?? '';
-    $proteinFilter = $_GET['protein'] ?? 'all';
-*/
+ 
     $sql = "
         SELECT id, heading, subheading, img_folder, hero_lg, hero_sm, protein
         FROM recipes
@@ -25,45 +15,6 @@
 
     $params = [];
     $types = "";
-/*
-    if (!empty($search)) {
-        $sql .= "
-            AND (heading LIKE ? 
-            OR subheading LIKE ? 
-            OR ingredients LIKE ? 
-            OR steps LIKE ?)
-        ";
-
-        $term = "%$search%";
-        $params = [$term, $term, $term, $term];
-        $types .= "ssss"; /*
-    }
-    /*beef chicken fish pork turkey vegetarian */
-    /*
-    if ($filterBeef) {
-        $sql .= " AND protein = 'beef'";
-    }
-    if ($filterChicken) {
-        $sql .= " AND protein = 'chicken'";
-    }
-    if ($filterFish) {
-        $sql .= " AND protein = 'fish'";
-    }
-    if ($filterPork) {
-        $sql .= " AND protein = 'pork'";
-    }
-    if ($filterTurkey) {
-        $sql .= " AND protein = 'turkey'";
-    }
-    if ($filterVeg) {
-        $sql .= " AND protein = 'vegetarian'";
-    }
-
-    $stmt = $connection->prepare($sql);
-
-    if (!empty($params)) {
-        $stmt->bind_param($types, ...$params);
-    } */
 
     // Prepare a SQL query with a WHERE clause for filtering
     if (!empty($search) && !empty($filter)) {
@@ -131,8 +82,8 @@
         </div>
     </div>
 
-    <div class="sidebar">
-        <h2>Filter</h2>
+    <div>
+        <h2 class="page-title">Filter</h2>
 
         <div class="filter-button">
         <form action="index.php" method="get">
