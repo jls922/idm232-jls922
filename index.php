@@ -76,6 +76,7 @@
 
     <div class="search">
         <div class="search-bar">
+            <!--<img id="search-icon" src="icons/search-icon.svg" alt="Search icon">-->
             <form action="index.php" method="get" class="search-form">
                 <input type="text" name="search" placeholder="What recipe are you looking for?" value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
             </form>
