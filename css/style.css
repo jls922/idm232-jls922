@@ -39,6 +39,15 @@ p, li {
     font-size: 18px;
 }
 
+.casestudyhero {
+    align-items: center;
+    border: 5px solid #003642;
+    border-radius: 5px;
+    display: block;
+    margin: auto;
+    width: 75%;
+}
+
 .content {
     margin: 40px;
 }
