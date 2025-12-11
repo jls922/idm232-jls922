@@ -16,7 +16,7 @@
     $params = [];
     $types = "";
 
-    // Prepare a SQL query with a WHERE clause for filtering
+    // SQL query with a WHERE for filtering
     if (!empty($search) && !empty($filter)) {
         $stmt = $connection->prepare(
             'SELECT * FROM recipes 
@@ -33,11 +33,10 @@
         $stmt = $connection->prepare(
             'SELECT * FROM recipes 
             WHERE heading LIKE ? 
-                OR subheading LIKE ? 
-                OR protein LIKE ?'
+                OR subheading LIKE ?'
         );
         $searchParam = '%' . $search . '%';
-        $stmt->bind_param('sss', $searchParam, $searchParam, $searchParam);
+        $stmt->bind_param('ss', $searchParam, $searchParam);
 
     } elseif (!empty($filter)) {
 
@@ -97,7 +96,7 @@
         </form>
         <form action="index.php" method="get">
             <input type="hidden" name="filter" value="Fish">
-            <button type="submit">Fish</button>
+            <button type="submit">Seafood</button>
         </form>
         
         <form action="index.php" method="get">
