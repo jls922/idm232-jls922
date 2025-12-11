@@ -30,12 +30,91 @@
             and then deployed to Drexel’s hosting environment using Cyberduck and PHPmyAdmin.</p>
     
         <h2 class="page-title">Context and Challenge</h2>
-        <p>Background:</p>
+        <h3>Background: </h3>
         <p>My final project for this class focuses on building a recipe website using MySQL and PHP. 
             The project is an individual assignment and is part of a scripting course for web development.  
             Over the course of 10 weeks, only three assignments helped 
             in the production of my final project: Alpha, Beta, and Final Project</p>
-        
+        <p>Developed on a zero-cost budget, the project aimed to give students practical experience with modern 
+            design concepts and back-end scripting. It met the course goals by handling user input, managing 
+            databases, and implementing advanced authentication. Throughout the project, I built a strong 
+            understanding of server-side programming and learned to apply modern development tools effectively.</p>
+        <h3>Problem: </h3>
+            <p>The original recipe PDFs made it difficult to quickly find content, browse categories, or 
+            search through all 37 recipes, and some were missing resources or context. 
+            With no filtering or querying capabilities, the assignment required building a backend system capable 
+            of organizing and retrieving the content dynamically. At the same time, the provided ZIP file of 
+            recipes was messy and overwhelming, filled with unstructured text, unoptimized images, and inconsistent 
+            formatting. It was a learning curve as this was my first time work with front-end development with PHP and MySQL for the 
+            especially with dozens of recipe pages within 10 weeks. Not only were there limitations of the original PDFs but 
+            also the challenge of learning server-side programming while managing a large volume of disorganized content.</p>
+        <h3>Goals & Objectives: </h3>
+            <p>The project required converting all recipe PDFs into structured digital data and storing them in 
+            a MySQL database capable of organizing categories, listing ingredients, and displaying recipe details. From there,
+             I needed to build a user-friendly front end that improved readability and accessibility while enabling fast
+              browsing and searching—features the original PDFs couldn’t offer. To support this functionality, I 
+              also created an API that delivered all recipe information in JSON format and hosted the final website 
+              publicly on Drexel’s servers.</p>
+        <h2 class="page-title">Process and Insight</h2>
+        <h3>Target Audience</h3>
+            <p>This project is designed for anyone who enjoys browsing online recipes, 
+                whether they’re new to cooking or seasoned in the kitchen. I aimed to 
+                create an simple, easy-to-use platform with straightforward features 
+                like a search bar and protein filters for smoother 
+                browsing.</p>
+        <h3>Database</h3>
+            <p>Because the original content were only in PDF format, each recipe's content was manually 
+                transcribed into a structured format on Google Sheets to organize the content into
+                the following categories:</p>
+            <ul>
+                <li>Recipe ID Number</li>
+                <li>Recipe Title</li>
+                <li>Recipe Subheading</li>
+                <li>Description</li>
+                <li>Ingredients List</li>
+                <li>Instruction Steps</li>
+                <li>Image File Names</li>
+                <li>Mobile Image File Names</li>
+                <li>Protein Tag</li>
+            </ul>
+            <p>The Google Sheets document was exported as a .csv file which was then imported into 
+                phpMyAdmin to test and modify fields as the data evolved locally on MAMP. 
+                I utilized asterisks in between each recipe steps to separate them 
+                with the PHP command “explode”.</p>
+            <img class="casestudyhero" src="images/database_casestudy.jpg" alt="Picture of Sheets Document and phpMyAdmin">
+            <h3>Development</h3>
+            <p>Before coding in PHP, I started with a template using HTML and CSS on VS Code to create my layout
+                and making it responsive. After that I converted the HTML files into PHP files. 
+                PHP was useful in repeated elements, like recipe cards and the contents within the recipe pages
+                making it much easier and quicker to create recipe pages and cards for as many recipes I can add to the database.</p>
+            <h3>Final Project</h3>
+                <p>To deploy my website, Cyberduck was used to upload the project to Drexel’s public server. 
+                    The MySQL database was exported from the localhost, and the SQL file was imported to Drexel's live hosting server through their 
+                    PHPmyAdmin.</p>
+            
+            <h2 class="page-title">The Solution</h2>
+            <h4>
+                <a href="https://vimeo.com/1145558694?share=copy&fl=sv&fe=ci" target="_blank">Screen Capture Video Link</a>
+            </h4>
+            <h4>
+                <a href="index.php" target="_blank">Live Project Link</a>
+            </h4>
+            <div class="vimeo-video" style="padding:53.18% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1145558694?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="idm232 final video"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <p>The website lays out all the recipes from the database in a organized way. The filter and search bar are at the top
+                and displayed so that users can easily select a filter or reset the filter to catorgize the recipes or search for a certain recipe.
+                The website is responsive so that it is accessible and responsive on all devices.
+            </p>
+
+            <h2 class="page-title">The Results</h2>
+            <p>This 10-week project significantly expanded my understanding of full-stack development. I learned how to design 
+                and integrate a database from scratch, structure content for accessibility, and deploy a live site—skills 
+                I had no prior experience with. Working through data cleanup, PHP integration, and server hosting gave me 
+                a clearer sense of how dynamic web applications function behind the scenes.</p>
+            <p>The project also strengthened my time-management and project-planning abilities. Looking back, 
+                documenting feedback and following a more structured cycle of research, testing, and design would have 
+                made the process more efficient. Still, the experience proved how even simple content can benefit from 
+                intentional structure and thoughtful design, and it sparked a deeper curiosity about how data moves through 
+                a system—insight I’ll carry into future projects.</p>
     </div>
 </body>
 </html>
